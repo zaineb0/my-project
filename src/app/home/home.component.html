@@ -1,0 +1,36 @@
+<div class="home-container">
+  <h1 class="page-title">Découvrez nos produits</h1>
+
+  <!-- Login/Signup links for non-authenticated users -->
+  <div *ngIf="!authService.isAuthenticated()" class="auth-links">
+    <a routerLink="/login" class="auth-link">Connexion</a>
+    <a routerLink="/signup" class="auth-link">Inscription</a>
+  </div>
+
+  <!-- Filters Section -->
+  <label for="search-filter">Recherche:</label>
+  <input id="search-filter" type="text" [(ngModel)]="searchTerm" (input)="filterProducts()" placeholder="Rechercher un produit...">
+
+  <div class="products-grid">
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <img [src]="product.image" [alt]="product.title" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-title">{{ product.title }}</h3>
+        <p class="product-price">{{ product.price }} DT</p>
+        <p class="product-category">{{ product.category }}</p>
+        <div class="product-actions">
+          <a [routerLink]="['/product', product.id]" class="details-btn">Voir détails</a>
+          <button *ngIf="authService.isAuthenticated()" (click)="addToCart(product)" class="add-to-cart-btn">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="filteredProducts.length === 0 && selectedCategory === 'vetement'" class="no-products">
+    <p>Aucun produit dans la section vêtements pour le moment.</p>
+  </div>
+
+  <div *ngIf="filteredProducts.length === 0 && selectedCategory !== 'vetement'" class="no-products">
+    <p>Aucun produit ne correspond à vos critères de recherche.</p>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="vendor-container">
+  <div class="header">
+    <h2 class="vendor-title">Gestion de mes Produits</h2>
+    <a routerLink="/profile-vendeur" class="profile-link">Mon Profil</a>
+  </div>
+  
+  <div class="add-product-form">
+    <h3>{{ isEditing ? 'Modifier le produit' : 'Ajouter un nouveau produit' }}</h3>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.title" placeholder="Nom du produit" class="product-input">
+      <input [(ngModel)]="newProduct.description" placeholder="Description" class="product-input">
+      <input [(ngModel)]="newProduct.price" type="number" placeholder="Prix" class="product-input">
+      <input [(ngModel)]="newProduct.image" placeholder="URL de l'image" class="product-input">
+      <input [(ngModel)]="newProduct.stock" type="number" placeholder="Stock disponible" class="product-input">
+      <select [(ngModel)]="newProduct.category" class="product-input">
+        <option value="">Sélectionnez une catégorie</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+      <button (click)="addProduct()" class="add-btn">{{ isEditing ? 'Mettre à jour' : 'Ajouter le produit' }}</button>
+      <button *ngIf="isEditing" (click)="cancelEdit()" class="cancel-btn">Annuler</button>
+    </div>
+  </div>
+
+  <div class="products-grid">
+    <div *ngFor="let p of myProducts" class="product-card">
+      <img [src]="p.image" [alt]="p.title" class="product-image">
+      <div class="product-info">
+        <h3>{{ p.title }}</h3>
+        <p class="description">{{ p.description }}</p>
+        <p class="price">{{ p.price }} DT</p>
+        <p class="stock">Stock: {{ p.stock }}</p>
+        <div class="action-buttons">
+          <button (click)="editProduct(p)" class="edit-btn">Modifier</button>
+          <button (click)="deleteProduct(p.id)" class="delete-btn">Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

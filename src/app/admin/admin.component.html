@@ -1,0 +1,39 @@
+<div class="admin-dashboard">
+  <div class="header">
+    <h2 class="admin-title">Tableau de Bord Administrateur</h2>
+    <a routerLink="/profile-admin" class="profile-link">Mon Profil</a>
+  </div>
+
+  <!-- User Registrations Section -->
+  <div class="dashboard-section">
+    <h3 class="section-title">Utilisateurs Inscrits</h3>
+    <div class="users-list">
+      <div *ngFor="let user of allUsers" class="user-card">
+        <div class="user-info">
+          <h4 class="user-name">{{ user.name }}</h4>
+          <p class="user-email">{{ user.email }}</p>
+          <span class="user-role role-{{ user.role }}">{{ user.role }}</span>
+        </div>
+        <button class="delete-user-btn" (click)="deleteUser(user.email)">
+          Supprimer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Management Section -->
+  <div class="dashboard-section">
+    <h3 class="section-title">Gestion des Produits</h3>
+    <div class="products-grid">
+      <div *ngFor="let p of allProducts" class="product-card">
+        <div class="product-info">
+          <h3 class="product-title">{{ p.title }}</h3>
+          <span class="product-price">{{ p.price }} DT</span>
+        </div>
+        <button class="delete-btn" (click)="delete(p.id)">
+          Supprimer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

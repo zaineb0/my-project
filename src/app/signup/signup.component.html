@@ -1,0 +1,39 @@
+<div class="signup-container">
+  <div class="form-card">
+    <div class="logo-section">
+      <h1 class="brand-title">Marketplace</h1>
+      <p class="subtitle">Créez votre compte</p>
+    </div>
+
+    <div *ngIf="showMessage" class="message" [class.error]="message.includes('déjà') || message.includes('remplir') || message.includes('doit')">
+      {{ message }}
+    </div>
+
+    <form class="signup-form" (ngSubmit)="register()">
+      <div class="input-group">
+        <label for="name">Nom complet</label>
+        <input id="name" [(ngModel)]="name" name="name" type="text" placeholder="Votre nom complet" autocomplete="name"
+               [class.input-error]="showMessage && !name" required />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input id="email" [(ngModel)]="email" name="email" type="email" placeholder="votre@email.com" autocomplete="username"
+               [class.input-error]="showMessage && !email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Mot de passe</label>
+        <input id="password" [(ngModel)]="password" name="password" type="password" placeholder="Au moins 8 caractères" autocomplete="new-password"
+               [class.input-error]="showMessage && (!password || !isPasswordValid(password))" required />
+        <small class="password-hint">Doit contenir au moins 8 caractères, une majuscule, une minuscule et un chiffre</small>
+      </div>
+
+      <button type="submit" class="signup-btn">S'inscrire</button>
+    </form>
+
+    <div class="login-link">
+      Déjà un compte ? <a routerLink="/login">Se connecter</a>
+    </div>
+  </div>
+</div>

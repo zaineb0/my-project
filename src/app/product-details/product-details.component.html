@@ -1,0 +1,36 @@
+<div class="product-details-container" *ngIf="!loading && !error">
+  <button class="back-btn" (click)="goBack()">← Retour</button>
+  
+  <div class="product-details">
+    <div class="product-image">
+      <img [src]="product.image" [alt]="product.title">
+    </div>
+    
+    <div class="product-info">
+      <h1>{{ product.title }}</h1>
+      <p class="category">{{ product.category }}</p>
+      <p class="price">{{ product.price }} DT</p>
+      <p class="description">{{ product.description }}</p>
+      <p class="stock" [class.out-of-stock]="product.stock === 0">
+        Stock disponible: {{ product.stock }}
+      </p>
+      
+      <button
+        *ngIf="authService.isAuthenticated()"
+        class="add-to-cart-btn"
+        (click)="addToCart()"
+        [disabled]="product.stock === 0">
+        {{ product.stock === 0 ? 'Rupture de stock' : 'Ajouter au panier' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="loading" *ngIf="loading">
+  <p>Chargement du produit...</p>
+</div>
+
+<div class="error" *ngIf="error">
+  <p>Erreur lors du chargement du produit.</p>
+  <button class="back-btn" (click)="goBack()">Retour à l'accueil</button>
+</div>

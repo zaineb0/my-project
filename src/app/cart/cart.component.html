@@ -1,0 +1,35 @@
+<div class="cart-container">
+  <h2 class="cart-title">Mon Panier</h2>
+
+  <div class="cart-actions" *ngIf="cartItems.length > 0">
+    <button class="clear-cart-btn" (click)="clearCart()">Vider le panier</button>
+  </div>
+
+  <div class="cart-grid" *ngIf="cartItems.length > 0">
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.image" [alt]="item.title" class="product-image">
+      <div class="product-details">
+        <h3>{{ item.title }}</h3>
+        <p class="price">{{ item.price }} DT</p>
+        <div class="quantity-controls">
+          <button class="qty-btn" (click)="decrementQuantity(item)">-</button>
+          <span class="quantity">{{ item.quantity }}</span>
+          <button class="qty-btn" (click)="incrementQuantity(item)">+</button>
+        </div>
+        <a [routerLink]="['/product', item.id]" class="details-link">Voir détails</a>
+        <button class="remove-btn" (click)="removeFromCart(item)">Supprimer</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-summary" *ngIf="cartItems.length > 0">
+    <h3>Total: {{ getTotal() }} DT</h3>
+    <button class="checkout-btn" (click)="checkout()">Procéder au paiement</button>
+  </div>
+
+  <div class="empty-cart" *ngIf="cartItems.length === 0">
+    <p>Votre panier est vide</p>
+    <a routerLink="/home" class="continue-shopping">Continuer vos achats</a>
+  </div>
+</div>
+

@@ -1,0 +1,607 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "iPhone 14 Pro",
+      "description": "Dernier smartphone Apple avec puce A16",
+      "price": 3499.99,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1660753617539",
+      "category": "Électronique",
+      "stock": 50
+    },
+    {
+      "id": "2",
+      "title": "MacBook Pro 16",
+      "description": "Portable Apple M2 Pro, 16Go RAM",
+      "price": 7999,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp16-spacegray-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1671304673229",
+      "category": "Électronique",
+      "stock": 25
+    },
+    {
+      "id": "3",
+      "title": "PlayStation 5",
+      "description": "Console de jeux dernière génération",
+      "price": 2299.99,
+      "image": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21",
+      "category": "Électronique",
+      "stock": 30
+    },
+    {
+      "id": "4",
+      "title": "Samsung S23 Ultra",
+      "description": "Samsung Galaxy S23 5G Android Smartphone, 128GB, 25W Fast Mains Charger Included [Amazon Exclusive], Unlocked Smartphone, Lavender, FR Version",
+      "price": 3299.99,
+      "image": "https://m.media-amazon.com/images/I/61rZLl-lbBL._AC_UL480_FMwebp_QL65_.jpg",
+      "category": "Électronique",
+      "stock": 45
+    },
+    {
+      "id": "5",
+      "title": "iPad Pro 12.9",
+      "description": "Apple 2021 iPad Pro (12.9-inch, Wi-FI, 512GB) - Space Gray (Refurbished)",
+      "price": 3699.99,
+      "image": "https://m.media-amazon.com/images/I/818jyH29KXS._AC_UL480_FMwebp_QL65_.jpg",
+      "category": "Électronique",
+      "stock": 35
+    },
+    {
+      "id": "6",
+      "title": "Écouteurs Bluetooth Sony WH-1000XM5",
+      "description": "Écouteurs sans fil avec réduction de bruit active",
+      "price": 399.99,
+      "image": "https://m.media-amazon.com/images/I/713IRzfhsEL._AC_UL480_FMwebp_QL65_.jpg",
+      "category": "Électronique",
+      "stock": 40
+    },
+    {
+      "id": "7",
+      "title": "Télévision LG OLED 55 pouces",
+      "description": "TV 4K OLED avec HDR et Smart TV",
+      "price": 1299.99,
+      "image": "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/9c7b2dfc-2eec-46bb-8cd6-0af06ec18baf._CR0,0,1200,628_SX810_CB1169409_QL70_.jpg",
+      "category": "Électronique",
+      "stock": 20
+    },
+    {
+      "id": "8",
+      "title": "Casque VR Oculus Quest 2",
+      "description": "Casque de réalité virtuelle autonome",
+      "price": 349.99,
+      "image": "https://via.placeholder.com/300x200?text=Casque+VR+Oculus",
+      "category": "Électronique",
+      "stock": 30
+    },
+    {
+      "id": "9",
+      "title": "Enceinte intelligente Amazon Echo Dot",
+      "description": "Assistant vocal avec Alexa intégré",
+      "price": 49.99,
+      "image": "https://via.placeholder.com/300x200?text=Enceinte+Amazon+Echo",
+      "category": "Électronique",
+      "stock": 60
+    },
+    {
+      "id": "10",
+      "title": "Montre connectée Garmin Forerunner 245",
+      "description": "Montre GPS pour sportifs avec suivi fitness",
+      "price": 299.99,
+      "image": "https://via.placeholder.com/300x200?text=Montre+Garmin",
+      "category": "Électronique",
+      "stock": 25
+    },
+    {
+      "id": "11",
+      "title": "Clavier mécanique Logitech MX Keys",
+      "description": "Clavier sans fil avec rétroéclairage",
+      "price": 129.99,
+      "image": "https://via.placeholder.com/300x200?text=Clavier+Logitech",
+      "category": "Électronique",
+      "stock": 35
+    },
+    {
+      "id": "12",
+      "title": "Caméra de sécurité Ring Spotlight",
+      "description": "Caméra WiFi avec projecteur LED",
+      "price": 199.99,
+      "image": "https://via.placeholder.com/300x200?text=Caméra+Ring",
+      "category": "Électronique",
+      "stock": 45
+    },
+    {
+      "id": "13",
+      "title": "Drone DJI Mini 3 Pro",
+      "description": "Drone compact avec caméra 4K",
+      "price": 799.99,
+      "image": "https://via.placeholder.com/300x200?text=Drone+DJI",
+      "category": "Électronique",
+      "stock": 15
+    },
+    {
+      "id": "14",
+      "title": "Console Nintendo Switch OLED",
+      "description": "Console hybride avec écran OLED",
+      "price": 349.99,
+      "image": "https://via.placeholder.com/300x200?text=Console+Nintendo",
+      "category": "Électronique",
+      "stock": 50
+    },
+    {
+      "id": "15",
+      "title": "Chargeur solaire portable Anker",
+      "description": "Batterie externe rechargeable au soleil",
+      "price": 79.99,
+      "image": "https://via.placeholder.com/300x200?text=Chargeur+Anker",
+      "category": "Électronique",
+      "stock": 40
+    },
+    {
+      "id": "16",
+      "title": "Canapé 3 places en cuir",
+      "description": "Canapé confortable pour salon",
+      "price": 899.99,
+      "image": "https://via.placeholder.com/300x200?text=Canapé+Cuir",
+      "category": "Maison",
+      "stock": 10
+    },
+    {
+      "id": "17",
+      "title": "Réfrigérateur Samsung Side-by-Side",
+      "description": "Réfrigérateur américain avec congélateur",
+      "price": 1499.99,
+      "image": "https://via.placeholder.com/300x200?text=Réfrigérateur+Samsung",
+      "category": "Maison",
+      "stock": 8
+    },
+    {
+      "id": "18",
+      "title": "Machine à café Nespresso",
+      "description": "Machine expresso automatique",
+      "price": 199.99,
+      "image": "https://via.placeholder.com/300x200?text=Machine+Café+Nespresso",
+      "category": "Maison",
+      "stock": 25
+    },
+    {
+      "id": "19",
+      "title": "Lit queen size en bois",
+      "description": "Lit double avec tête de lit",
+      "price": 599.99,
+      "image": "https://via.placeholder.com/300x200?text=Lit+Bois",
+      "category": "Maison",
+      "stock": 12
+    },
+    {
+      "id": "20",
+      "title": "Aspirateur robot iRobot Roomba",
+      "description": "Aspirateur automatique intelligent",
+      "price": 399.99,
+      "image": "https://via.placeholder.com/300x200?text=Aspirateur+iRobot",
+      "category": "Maison",
+      "stock": 20
+    },
+    {
+      "id": "21",
+      "title": "Table à manger extensible",
+      "description": "Table pour 6 personnes extensible",
+      "price": 499.99,
+      "image": "https://via.placeholder.com/300x200?text=Table+Manger",
+      "category": "Maison",
+      "stock": 15
+    },
+    {
+      "id": "22",
+      "title": "Lave-linge Bosch 8kg",
+      "description": "Machine à laver frontale",
+      "price": 699.99,
+      "image": "https://via.placeholder.com/300x200?text=Lave-linge+Bosch",
+      "category": "Maison",
+      "stock": 10
+    },
+    {
+      "id": "23",
+      "title": "Lampe de bureau LED",
+      "description": "Lampe ajustable avec charge USB",
+      "price": 49.99,
+      "image": "https://via.placeholder.com/300x200?text=Lampe+Bureau",
+      "category": "Maison",
+      "stock": 30
+    },
+    {
+      "id": "24",
+      "title": "Étagère murale IKEA",
+      "description": "Étagère modulable en bois",
+      "price": 79.99,
+      "image": "https://via.placeholder.com/300x200?text=Étagère+IKEA",
+      "category": "Maison",
+      "stock": 25
+    },
+    {
+      "id": "25",
+      "title": "Micro-ondes Whirlpool",
+      "description": "Four à micro-ondes avec grill",
+      "price": 149.99,
+      "image": "https://via.placeholder.com/300x200?text=Micro-ondes+Whirlpool",
+      "category": "Maison",
+      "stock": 18
+    },
+    {
+      "id": "26",
+      "title": "Le Petit Prince",
+      "description": "Roman classique d'Antoine de Saint-Exupéry",
+      "price": 9.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Petit+Prince",
+      "category": "livre",
+      "stock": 50
+    },
+    {
+      "id": "27",
+      "title": "1984 de George Orwell",
+      "description": "Dystopie politique",
+      "price": 12.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+1984",
+      "category": "livre",
+      "stock": 40
+    },
+    {
+      "id": "28",
+      "title": "Harry Potter et la Pierre Philosophale",
+      "description": "Premier tome de la saga Harry Potter",
+      "price": 14.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Harry+Potter",
+      "category": "livre",
+      "stock": 60
+    },
+    {
+      "id": "29",
+      "title": "La Peste d'Albert Camus",
+      "description": "Roman existentialiste",
+      "price": 11.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Peste",
+      "category": "livre",
+      "stock": 35
+    },
+    {
+      "id": "30",
+      "title": "Le Seigneur des Anneaux",
+      "description": "Épopée fantastique de J.R.R. Tolkien",
+      "price": 19.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Seigneur+Anneaux",
+      "category": "livre",
+      "stock": 25
+    },
+    {
+      "id": "31",
+      "title": "Dune de Frank Herbert",
+      "description": "Science-fiction épique",
+      "price": 16.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Dune",
+      "category": "livre",
+      "stock": 30
+    },
+    {
+      "id": "32",
+      "title": "Les Misérables de Victor Hugo",
+      "description": "Chef-d'œuvre littéraire français",
+      "price": 18.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Misérables",
+      "category": "livre",
+      "stock": 20
+    },
+    {
+      "id": "33",
+      "title": "Pride and Prejudice",
+      "description": "Roman de Jane Austen",
+      "price": 10.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Pride+Prejudice",
+      "category": "livre",
+      "stock": 45
+    },
+    {
+      "id": "34",
+      "title": "Le Comte de Monte-Cristo",
+      "description": "Aventure de Alexandre Dumas",
+      "price": 15.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Monte-Cristo",
+      "category": "livre",
+      "stock": 28
+    },
+    {
+      "id": "35",
+      "title": "To Kill a Mockingbird",
+      "description": "Roman de Harper Lee",
+      "price": 13.99,
+      "image": "https://via.placeholder.com/300x200?text=Livre+Mockingbird",
+      "category": "livre",
+      "stock": 38
+    },
+    {
+      "id": "36",
+      "title": "T-shirt coton bio",
+      "description": "T-shirt confortable en coton biologique",
+      "price": 19.99,
+      "image": "https://via.placeholder.com/300x200?text=T-shirt+Coton",
+      "category": "vetement",
+      "stock": 100
+    },
+    {
+      "id": "37",
+      "title": "Jean slim fit Levi's",
+      "description": "Pantalon denim classique",
+      "price": 79.99,
+      "image": "https://via.placeholder.com/300x200?text=Jean+Levi's",
+      "category": "vetement",
+      "stock": 50
+    },
+    {
+      "id": "38",
+      "title": "Robe d'été fleurie",
+      "description": "Robe légère pour l'été",
+      "price": 49.99,
+      "image": "https://via.placeholder.com/300x200?text=Robe+Été",
+      "category": "vetement",
+      "stock": 30
+    },
+    {
+      "id": "39",
+      "title": "Veste en cuir noir",
+      "description": "Veste moto en cuir véritable",
+      "price": 199.99,
+      "image": "https://via.placeholder.com/300x200?text=Veste+Cuir",
+      "category": "vetement",
+      "stock": 20
+    },
+    {
+      "id": "40",
+      "title": "Pull en laine mérinos",
+      "description": "Pull chaud et doux",
+      "price": 89.99,
+      "image": "https://via.placeholder.com/300x200?text=Pull+Laine",
+      "category": "vetement",
+      "stock": 40
+    },
+    {
+      "id": "41",
+      "title": "Chaussures de sport Nike",
+      "description": "Baskets running confortables",
+      "price": 129.99,
+      "image": "https://via.placeholder.com/300x200?text=Chaussures+Nike",
+      "category": "vetement",
+      "stock": 60
+    },
+    {
+      "id": "42",
+      "title": "Chapeau de soleil",
+      "description": "Chapeau large pour protection UV",
+      "price": 24.99,
+      "image": "https://via.placeholder.com/300x200?text=Chapeau+Soleil",
+      "category": "vetement",
+      "stock": 70
+    },
+    {
+      "id": "43",
+      "title": "Écharpe en cachemire",
+      "description": "Écharpe douce et chaude",
+      "price": 69.99,
+      "image": "https://via.placeholder.com/300x200?text=Écharpe+Cachemire",
+      "category": "vetement",
+      "stock": 25
+    },
+    {
+      "id": "44",
+      "title": "Short de bain",
+      "description": "Short pour la plage",
+      "price": 29.99,
+      "image": "https://via.placeholder.com/300x200?text=Short+Bain",
+      "category": "vetement",
+      "stock": 45
+    },
+    {
+      "id": "45",
+      "title": "Blouson imperméable",
+      "description": "Veste waterproof pour pluie",
+      "price": 99.99,
+      "image": "https://via.placeholder.com/300x200?text=Blouson+Imperméable",
+      "category": "vetement",
+      "stock": 35
+    },
+    {
+      "id": "46",
+      "title": "Ballon de football Adidas",
+      "description": "Ballon officiel pour match",
+      "price": 39.99,
+      "image": "https://via.placeholder.com/300x200?text=Ballon+Football",
+      "category": "sport",
+      "stock": 80
+    },
+    {
+      "id": "47",
+      "title": "Raquette de tennis Wilson",
+      "description": "Raquette professionnelle",
+      "price": 149.99,
+      "image": "https://via.placeholder.com/300x200?text=Raquette+Tennis",
+      "category": "sport",
+      "stock": 30
+    },
+    {
+      "id": "48",
+      "title": "Vélo de montagne Trek",
+      "description": "VTT tout terrain",
+      "price": 899.99,
+      "image": "https://via.placeholder.com/300x200?text=Vélo+Montagne",
+      "category": "sport",
+      "stock": 15
+    },
+    {
+      "id": "49",
+      "title": "Haltères ajustables",
+      "description": "Ensemble d'haltères 5-50kg",
+      "price": 199.99,
+      "image": "https://via.placeholder.com/300x200?text=Haltères",
+      "category": "sport",
+      "stock": 20
+    },
+    {
+      "id": "50",
+      "title": "Tapis de yoga",
+      "description": "Tapis antidérapant pour yoga",
+      "price": 29.99,
+      "image": "https://via.placeholder.com/300x200?text=Tapis+Yoga",
+      "category": "sport",
+      "stock": 50
+    },
+    {
+      "id": "51",
+      "title": "Maillot de bain Speedo",
+      "description": "Maillot de compétition",
+      "price": 49.99,
+      "image": "https://via.placeholder.com/300x200?text=Maillot+Bain",
+      "category": "sport",
+      "stock": 40
+    },
+    {
+      "id": "52",
+      "title": "Casque de vélo",
+      "description": "Casque de sécurité pour cycliste",
+      "price": 59.99,
+      "image": "https://via.placeholder.com/300x200?text=Casque+Vélo",
+      "category": "sport",
+      "stock": 35
+    },
+    {
+      "id": "53",
+      "title": "Cordes à sauter",
+      "description": "Corde pour cardio training",
+      "price": 14.99,
+      "image": "https://via.placeholder.com/300x200?text=Cordes+Sauter",
+      "category": "sport",
+      "stock": 60
+    },
+    {
+      "id": "54",
+      "title": "Ballon de basket Nike",
+      "description": "Ballon officiel NBA",
+      "price": 79.99,
+      "image": "https://via.placeholder.com/300x200?text=Ballon+Basket",
+      "category": "sport",
+      "stock": 25
+    },
+    {
+      "id": "55",
+      "title": "Gants de boxe",
+      "description": "Gants pour entraînement",
+      "price": 39.99,
+      "image": "https://via.placeholder.com/300x200?text=Gants+Boxe",
+      "category": "sport",
+      "stock": 30
+    },
+    {
+      "id": "56",
+      "title": "Lego Creator 3-en-1",
+      "description": "Set de construction modulable",
+      "price": 49.99,
+      "image": "https://via.placeholder.com/300x200?text=Lego+Creator",
+      "category": "jouet",
+      "stock": 70
+    },
+    {
+      "id": "57",
+      "title": "Poupée Barbie Dreamhouse",
+      "description": "Maison de poupée avec accessoires",
+      "price": 199.99,
+      "image": "https://via.placeholder.com/300x200?text=Poupée+Barbie",
+      "category": "jouet",
+      "stock": 20
+    },
+    {
+      "id": "58",
+      "title": "Voiture télécommandée",
+      "description": "Voiture RC avec contrôle radio",
+      "price": 79.99,
+      "image": "https://via.placeholder.com/300x200?text=Voiture+RC",
+      "category": "jouet",
+      "stock": 40
+    },
+    {
+      "id": "59",
+      "title": "Puzzle 1000 pièces",
+      "description": "Puzzle paysage montagneux",
+      "price": 19.99,
+      "image": "https://via.placeholder.com/300x200?text=Puzzle+1000",
+      "category": "jouet",
+      "stock": 50
+    },
+    {
+      "id": "60",
+      "title": "Jeu de société Monopoly",
+      "description": "Jeu classique d'immobilier",
+      "price": 29.99,
+      "image": "https://via.placeholder.com/300x200?text=Monopoly",
+      "category": "jouet",
+      "stock": 35
+    },
+    {
+      "id": "61",
+      "title": "Drones jouets",
+      "description": "Mini drone pour enfants",
+      "price": 39.99,
+      "image": "https://via.placeholder.com/300x200?text=Drone+Jouet",
+      "category": "jouet",
+      "stock": 45
+    },
+    {
+      "id": "62",
+      "title": "Kit de chimie",
+      "description": "Expériences scientifiques pour enfants",
+      "price": 24.99,
+      "image": "https://via.placeholder.com/300x200?text=Kit+Chimie",
+      "category": "jouet",
+      "stock": 30
+    },
+    {
+      "id": "63",
+      "title": "Ballon de foot junior",
+      "description": "Ballon adapté aux enfants",
+      "price": 14.99,
+      "image": "https://via.placeholder.com/300x200?text=Ballon+Foot+Junior",
+      "category": "jouet",
+      "stock": 60
+    },
+    {
+      "id": "64",
+      "title": "Jeu de construction Meccano",
+      "description": "Pièces pour construire des machines",
+      "price": 59.99,
+      "image": "https://via.placeholder.com/300x200?text=Meccano",
+      "category": "jouet",
+      "stock": 25
+    },
+    {
+      "id": "65",
+      "title": "Peluche ours géant",
+      "description": "Nounours doux et câlin",
+      "price": 34.99,
+      "image": "https://via.placeholder.com/300x200?text=Peluche+Ours",
+      "category": "jouet",
+      "stock": 40
+    },
+    {
+      "id": "a279",
+      "title": "Sèche cheveux Ionique BABYLISS",
+      "description": "Sèche cheveux Ionique BABYLISS - Puissance: 2200 Watts - 3 niveaux de chaleur - 2 vitesses pour un contrôle ultime de votre style et bouton air frais pour fixer votre coiffure durablement - Fonction ionique - Diffuseur large: 15 cm - Revêtement en Céramique",
+      "price": 165,
+      "image": "https://mk-media.mytek.tn/media/catalog/product/cache/8be3f98b14227a82112b46963246dfe1/s/e/seche-cheveux-ionique-babyliss-d572de-turbo-smooth-2200w.jpg",
+      "stock": 65,
+      "category": ""
+    },
+    {
+      "id": "bab4",
+      "title": "Poêle de Cuisson",
+      "description": "Dimensions des trous: Diamètre: 9 cm, Profondeur: 2.2 cm - Dimensions de forme Carré: 18 cm - Revêtement: Granite - Manche en bois - Préparation d'œufs, de crêpes, de pancakes, de galettes et autres plats de petit déjeuner - Design compact et maniable - Facile à nettoyer grâce à la surface antiadhésive",
+      "price": 49,
+      "image": "https://mk-media.mytek.tn/media/catalog/product/cache/8be3f98b14227a82112b46963246dfe1/p/o/poele-de-cuisson-3-compartiments-noir.jpg",
+      "stock": 20,
+      "category": "Maison"
+    }
+  ]
+}

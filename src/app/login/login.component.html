@@ -1,0 +1,38 @@
+<div class="login-container">
+  <div class="form-card">
+    <div class="logo-section">
+      <h1 class="brand-title">Marketplace</h1>
+      <p class="subtitle">Connectez-vous à votre compte</p>
+    </div>
+
+    <div *ngIf="showMessage" class="message" [class.error]="message.includes('incorrect')">
+      {{ message }}
+    </div>
+
+    <form class="login-form" (ngSubmit)="login()">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input id="email" [(ngModel)]="email" name="email" type="email" placeholder="votre@email.com" autocomplete="username"
+               [class.input-error]="showMessage && (!email || !password)" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Mot de passe</label>
+        <input id="password" [(ngModel)]="password" name="password" type="password" placeholder="Votre mot de passe" autocomplete="current-password"
+               [class.input-error]="showMessage && (!email || !password)" required />
+      </div>
+
+      <button type="submit" class="login-btn">Se connecter</button>
+    </form>
+
+    <div class="divider">
+      <span>ou</span>
+    </div>
+
+    <button class="visitor-btn" (click)="visitShop()">Continuer comme visiteur</button>
+
+    <div class="signup-link">
+      Pas encore de compte ? <a routerLink="/signup">S'inscrire</a>
+    </div>
+  </div>
+</div>

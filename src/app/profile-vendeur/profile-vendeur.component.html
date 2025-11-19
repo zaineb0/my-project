@@ -1,0 +1,70 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <h2>Profil Vendeur</h2>
+    <button (click)="logout()" class="logout-btn">Déconnexion</button>
+  </div>
+  <div class="profile-photo">
+    <img [src]="currentUser?.photo" alt="Photo de profil" class="profile-img">
+  </div>
+
+  <div class="profile-info" *ngIf="!isEditing">
+    <div class="info-row">
+      <strong>Nom:</strong>
+      <span>{{ currentUser?.name }}</span>
+    </div>
+    <div class="info-row">
+      <strong>Email:</strong>
+      <span>{{ currentUser?.email }}</span>
+    </div>
+    <div class="info-row">
+      <strong>Rôle:</strong>
+      <span>{{ currentUser?.role }}</span>
+    </div>
+    <div class="info-row">
+      <strong>Téléphone:</strong>
+      <span>{{ currentUser?.phone }}</span>
+    </div>
+    <div class="info-row">
+      <strong>Adresse:</strong>
+      <span>{{ currentUser?.address }}</span>
+    </div>
+    <div class="info-row bio-row">
+      <strong>Bio:</strong>
+      <span>{{ currentUser?.bio }}</span>
+    </div>
+  </div>
+
+  <form class="profile-form" *ngIf="isEditing" [formGroup]="profileForm" (ngSubmit)="onSave()">
+    <div class="form-group">
+      <label for="name">Nom:</label>
+      <input type="text" id="name" formControlName="name" class="form-input">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" class="form-input">
+    </div>
+    <div class="form-group">
+      <label for="phone">Téléphone:</label>
+      <input type="tel" id="phone" formControlName="phone" class="form-input">
+    </div>
+    <div class="form-group">
+      <label for="address">Adresse:</label>
+      <input type="text" id="address" formControlName="address" class="form-input">
+    </div>
+    <div class="form-group">
+      <label for="bio">Bio:</label>
+      <textarea id="bio" formControlName="bio" class="form-textarea" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="photo">Photo de profil:</label>
+      <input type="file" id="photo" accept="image/*" (change)="onFileSelected($event)" class="form-input">
+    </div>
+  </form>
+
+  <div class="actions">
+    <button *ngIf="!isEditing" (click)="startEditing()" class="edit-btn">Modifier Profil</button>
+    <button *ngIf="isEditing" (click)="onSave()" class="save-btn" [disabled]="!profileForm.valid">Sauvegarder</button>
+    <button *ngIf="isEditing" (click)="cancelEditing()" class="cancel-btn">Annuler</button>
+    <button (click)="goBack()" class="back-btn">Retour</button>
+  </div>
+</div>

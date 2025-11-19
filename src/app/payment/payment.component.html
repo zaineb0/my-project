@@ -1,0 +1,107 @@
+<div class="payment-container">
+  <h2 class="payment-title">Paiement et Livraison</h2>
+
+  <div class="order-summary">
+    <h3>Récapitulatif de la commande</h3>
+    <p>Total à payer : {{ getTotal() }} DT</p>
+  </div>
+
+  <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" class="payment-form">
+
+    <!-- Delivery Details -->
+    <div class="form-section">
+      <h3>Détails de livraison</h3>
+      <div class="form-group">
+        <label for="fullName">Nom complet</label>
+        <input type="text" id="fullName" formControlName="fullName" class="form-control">
+        <div *ngIf="paymentForm.get('fullName')?.invalid && paymentForm.get('fullName')?.touched" class="error">
+          Nom complet requis.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Adresse</label>
+        <input type="text" id="address" formControlName="address" class="form-control">
+        <div *ngIf="paymentForm.get('address')?.invalid && paymentForm.get('address')?.touched" class="error">
+          Adresse requise.
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="city">Ville</label>
+          <input type="text" id="city" formControlName="city" class="form-control">
+          <div *ngIf="paymentForm.get('city')?.invalid && paymentForm.get('city')?.touched" class="error">
+            Ville requise.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="postalCode">Code postal</label>
+          <input type="text" id="postalCode" formControlName="postalCode" class="form-control">
+          <div *ngIf="paymentForm.get('postalCode')?.invalid && paymentForm.get('postalCode')?.touched" class="error">
+            Code postal requis.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" formControlName="phone" class="form-control" placeholder="8 chiffres">
+        <div *ngIf="paymentForm.get('phone')?.invalid && paymentForm.get('phone')?.touched" class="error">
+          Téléphone requis (8 chiffres).
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Method Selection -->
+    <div class="form-section">
+      <h3>Méthode de paiement</h3>
+      <div class="payment-method">
+        <label class="radio-label">
+          <input type="radio" name="paymentMethod" value="cash" [checked]="paymentMethod === 'cash'" (change)="onPaymentMethodChange('cash')">
+          Paiement à la livraison
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="paymentMethod" value="online" [checked]="paymentMethod === 'online'" (change)="onPaymentMethodChange('online')">
+          Paiement en ligne
+        </label>
+      </div>
+    </div>
+
+    <!-- Online Payment Details -->
+    <div class="form-section" *ngIf="paymentMethod === 'online'">
+      <h3>Détails de la carte</h3>
+      <div class="form-group">
+        <label for="cardNumber">Numéro de carte</label>
+        <input type="text" id="cardNumber" formControlName="cardNumber" class="form-control" placeholder="16 chiffres">
+        <div *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched" class="error">
+          Numéro de carte requis (16 chiffres).
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expiryDate">Date d'expiration</label>
+          <input type="text" id="expiryDate" formControlName="expiryDate" class="form-control" placeholder="MM/YY">
+          <div *ngIf="paymentForm.get('expiryDate')?.invalid && paymentForm.get('expiryDate')?.touched" class="error">
+            Date d'expiration requise (MM/YY).
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" formControlName="cvv" class="form-control" placeholder="3 chiffres">
+          <div *ngIf="paymentForm.get('cvv')?.invalid && paymentForm.get('cvv')?.touched" class="error">
+            CVV requis (3 chiffres).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-actions">
+      <button type="submit" class="pay-btn" [disabled]="!paymentForm.valid">Confirmer le paiement</button>
+    </div>
+  </form>
+</div>
