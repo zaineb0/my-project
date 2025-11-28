@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - marketplace-network
+
+  backend:
+    image: node:18-alpine
+    working_dir: /app
+    command: npx json-server --watch db.json --port 3000 --host 0.0.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./db.json:/app/db.json
+    networks:
+      - marketplace-network
+
+networks:
+  marketplace-network:
+    driver: bridge
