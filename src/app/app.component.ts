@@ -11,7 +11,7 @@ import { CartService } from './cart.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'marketplace';
+  title = 'Maison Nova';
   showNavbar = false;
   cartItemCount = 0;
   userRole: string | null = null;

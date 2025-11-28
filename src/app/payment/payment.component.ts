@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CartService } from '../cart.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { ProductService } from '../product.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-payment',
@@ -18,7 +20,7 @@ export class PaymentComponent implements OnInit {
     private fb: FormBuilder,
     private cartService: CartService,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService, private productService: ProductService
   ) {
     this.paymentForm = this.fb.group({
       // Delivery details
@@ -59,9 +61,43 @@ export class PaymentComponent implements OnInit {
       // Simulate payment processing
       const confirmed = confirm(`Confirmer le paiement de ${this.total} DT ?`);
       if (confirmed) {
-        this.toastr.success('Paiement réussi ! Votre commande a été passée.');
-        this.cartService.clearCart();
-        this.router.navigate(['/home']);
+        const cartItems = this.cartService.getCartItems();
+        if (!cartItems || cartItems.length === 0) {
+          this.toastr.error('Le panier est vide.');
+          return;
+        }
+
+        // Récupérer les produits actuels pour vérifier le stock
+        const productRequests = cartItems.map(item => this.productService.getById(item.id.toString()));
+        forkJoin(productRequests).subscribe(products => {
+          // Vérifier disponibilité
+          for (let i = 0; i < products.length; i++) {
+            const prod: any = products[i];
+            const item = cartItems[i];
+            if ((prod.stock ?? 0) < item.quantity) {
+              this.toastr.error(`Stock insuffisant pour ${prod.title || 'le produit'}.`);
+              return;
+            }
+          }
+
+          // Construire les requêtes de mise à jour du stock
+          const updateRequests = products.map((prod: any, idx: number) => {
+            const item = cartItems[idx];
+            const updated = { ...prod, stock: (prod.stock ?? 0) - item.quantity };
+            return this.productService.updateProduct(prod.id.toString(), updated);
+          });
+
+          // Exécuter toutes les mises à jour puis vider le panier
+          forkJoin(updateRequests).subscribe(() => {
+            this.toastr.success('Paiement réussi ! Votre commande a été passée.');
+            this.cartService.clearCart();
+            this.router.navigate(['/home']);
+          }, () => {
+            this.toastr.error('Erreur lors de la mise à jour du stock.');
+          });
+        }, () => {
+          this.toastr.error('Erreur lors de la récupération des produits.');
+        });
       }
     } else {
       this.toastr.error('Veuillez remplir tous les champs requis.');
